@@ -83,6 +83,13 @@ ul .dropdown-menu li a:hover{
   justify-content: space-around;
   margin-top: 2%;
 }
+.ind-icon{
+  height: 70px;
+  width: 70px;
+}
+.flag-country, .icon-gen{
+  height: 50px;
+}
 section{
   margin-bottom: 70px;
 }
