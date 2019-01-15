@@ -124,10 +124,11 @@ violenceIndicators[3].innerHTML = `${worldbank.filter(indicatorsMexicoArray, 'SG
 const womenInfo = (woman, index, country) => {
   const averageWomenArray = worldbank.calculateAverage(...worldbank.dataOfData(worldbank.genreFilter(country, 'FE')));
   return `
-  <div class="indicator-name"> ${woman.indicatorName}</div>
-  <div class="buttons">
-    <button class="show-btn" id ="show-btn-${woman.countryName}-${woman.countryCode}-${woman.indicatorCode}" data-code="${woman.countryName}-${woman.countryCode}-${woman.indicatorCode}">Ver datos</button>
-    <button class="hide-btn" id ="hide-btn-${woman.countryName}-${woman.countryCode}-${woman.indicatorCode}" data-code="${woman.countryName}-${woman.countryCode}-${woman.indicatorCode}">Ocultar</button>
+  <div class="indicator-name"> ${woman.indicatorName}
+    <div class="buttons">
+      <button class="show-btn" id ="show-btn-${woman.countryName}-${woman.countryCode}-${woman.indicatorCode}" data-code="${woman.countryName}-${woman.countryCode}-${woman.indicatorCode}">Ver datos</button>
+      <button class="hide-btn" id ="hide-btn-${woman.countryName}-${woman.countryCode}-${woman.indicatorCode}" data-code="${woman.countryName}-${woman.countryCode}-${woman.indicatorCode}">Ocultar</button>
+    </div>
   </div>
   <section class="listado-data" id="listas-${woman.countryName}-${woman.countryCode}-${woman.indicatorCode}" data-code="${woman.countryName}-${woman.countryCode}-${woman.indicatorCode}">
     ${dataList(Object.entries(woman.data))}
@@ -144,10 +145,11 @@ document.getElementById('women-indicators-me').innerHTML = `${worldbank.genreFil
 const menInfo = (man, index, country) => {
   const averageMenArray = worldbank.calculateAverage(...worldbank.dataOfData(worldbank.genreFilter(country, 'MA')));
   return `
-  <div class="indicator-name"> ${man.indicatorName} </div>
-  <div class="buttons">
-    <button class="show-btn" id ="show-btn-${man.countryName}-${man.countryCode}-${man.indicatorCode}" data-code="${man.countryName}-${man.countryCode}-${man.indicatorCode}">Ver datos</button>
-    <button class="hide-btn" id ="hide-btn-${man.countryName}-${man.countryCode}-${man.indicatorCode}" data-code="${man.countryName}-${man.countryCode}-${man.indicatorCode}">Ocultar</button>
+  <div class="indicator-name"> ${man.indicatorName}
+    <div class="buttons">
+      <button class="show-btn" id ="show-btn-${man.countryName}-${man.countryCode}-${man.indicatorCode}" data-code="${man.countryName}-${man.countryCode}-${man.indicatorCode}">Ver datos</button>
+      <button class="hide-btn" id ="hide-btn-${man.countryName}-${man.countryCode}-${man.indicatorCode}" data-code="${man.countryName}-${man.countryCode}-${man.indicatorCode}">Ocultar</button>
+    </div>
   </div>
   <section class="listado-data" id="listas-${man.countryName}-${man.countryCode}-${man.indicatorCode}" data-code="${man.countryName}-${man.countryCode}-${man.indicatorCode}">
     ${dataList(Object.entries(man.data))}
