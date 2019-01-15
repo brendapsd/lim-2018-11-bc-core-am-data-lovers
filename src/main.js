@@ -152,7 +152,9 @@ document.getElementById('women-indicators-pe').innerHTML = `${worldbank.genreFil
 document.getElementById('women-indicators-br').innerHTML = `${worldbank.genreFilter(indicatorsBrazilArray, 'FE').map(womenInfo).join('')}`;
 document.getElementById('women-indicators-ch').innerHTML = `${worldbank.genreFilter(indicatorsChileArray, 'FE').map(womenInfo).join('')}`;
 document.getElementById('women-indicators-me').innerHTML = `${worldbank.genreFilter(indicatorsMexicoArray, 'FE').map(womenInfo).join('')}`;
+
 // Mostrar indicadores mujeres en html con select
+
 const countrySelectWomen = document.getElementById('country-select-women');
 const womenShowIndicator = () => {
   if (countrySelectWomen.selectedIndex === 0) {
