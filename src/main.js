@@ -119,7 +119,7 @@ violenceIndicators[0].innerHTML = `${worldbank.filter(indicatorsPeruArray, 'SG.V
 violenceIndicators[1].innerHTML = `${worldbank.filter(indicatorsBrazilArray, 'SG.VAW').map(violenceInfo).join('')}`;
 violenceIndicators[2].innerHTML = `${worldbank.filter(indicatorsChileArray, 'SG.VAW').map(violenceInfo).join('')}`;
 violenceIndicators[3].innerHTML = `${worldbank.filter(indicatorsMexicoArray, 'SG.VAW').map(violenceInfo).join('')}`;
-
+/*
 // filtrado por sexo 
 const womenInfo = (woman, index, country) => { 
   const averageWomenArray = worldbank.calculateAverage(...worldbank.dataOfData(worldbank.genreFilter(country, 'FE')));
@@ -140,8 +140,8 @@ document.getElementById('women-indicators-pe').innerHTML = `${worldbank.genreFil
 document.getElementById('women-indicators-br').innerHTML = `${worldbank.genreFilter(indicatorsBrazilArray, 'FE').map(womenInfo).join('')}`;
 document.getElementById('women-indicators-ch').innerHTML = `${worldbank.genreFilter(indicatorsChileArray, 'FE').map(womenInfo).join('')}`;
 document.getElementById('women-indicators-me').innerHTML = `${worldbank.genreFilter(indicatorsMexicoArray, 'FE').map(womenInfo).join('')}`;
-// Mostrar indicadores mujeres en html con select
-
+// Mostrar indicadores mujeres en html con select 
+*/
 const menInfo = (man, index, country) => {
   const averageMenArray = worldbank.calculateAverage(...worldbank.dataOfData(worldbank.genreFilter(country, 'MA')));
   return `
@@ -180,16 +180,24 @@ for (let key of hideBtn) {
 }
 // select para mujeres
 
+const womenInfo = (woman) => { 
+  let arrData = 
+  return  
+};
 document.getElementById('country-select-women').addEventListener('change', (evt) => {
   const selectedIndex = evt.currentTarget.selectedIndex;
   if (selectedIndex === 0) {
-    console.log('hola'); 
+    womenInfo(worldbank.genreFilter(indicatorsPeruArray, 'FE'));
+    // console.log(womenInfo); 
   } else if (selectedIndex === 1) {
-    console.log('como estas'); 
+    womenInfo(worldbank.genreFilter(indicatorsBrazilArray, 'FE'));
+    // console.log(womenInfo); 
   } else if (selectedIndex === 2) {
-    console.log('bien y tu');  
+    womenInfo(worldbank.genreFilter(indicatorsChileArray, 'FE'));
+    // console.log(womenInfo);  
   } else if (selectedIndex === 3) {
-    console.log('tambien');  
+    womenInfo(worldbank.genreFilter(indicatorsMexicoArray, 'FE'));
+    // console.log(womenInfo);  
   }  
 });
 /*
