@@ -296,10 +296,6 @@ document.getElementById('peru-map').addEventListener('click', () => {
   document.getElementById('mexico-page').style.display = 'none';
   document.getElementById('women-page').style.display = 'none';
   document.getElementById('men-page').style.display = 'none';
-  document.getElementById('women-indicators-pe').style.display = 'none';
-  document.getElementById('women-indicators-br').style.display = 'none';
-  document.getElementById('women-indicators-ch').style.display = 'none';
-  document.getElementById('women-indicators-me').style.display = 'none';
   document.getElementById('upward-page').style.display = 'none';
   document.getElementById('falling-page').style.display = 'none';
 });
@@ -311,10 +307,6 @@ document.getElementById('brazil-map').addEventListener('click', () => {
   document.getElementById('mexico-page').style.display = 'none';
   document.getElementById('women-page').style.display = 'none';
   document.getElementById('men-page').style.display = 'none';
-  document.getElementById('women-indicators-pe').style.display = 'none';
-  document.getElementById('women-indicators-br').style.display = 'none';
-  document.getElementById('women-indicators-ch').style.display = 'none';
-  document.getElementById('women-indicators-me').style.display = 'none';
   document.getElementById('upward-page').style.display = 'none';
   document.getElementById('falling-page').style.display = 'none';
 });
@@ -326,10 +318,6 @@ document.getElementById('chile-map').addEventListener('click', () => {
   document.getElementById('mexico-page').style.display = 'none';
   document.getElementById('women-page').style.display = 'none';
   document.getElementById('men-page').style.display = 'none'; 
-  document.getElementById('women-indicators-pe').style.display = 'none';
-  document.getElementById('women-indicators-br').style.display = 'none';
-  document.getElementById('women-indicators-ch').style.display = 'none';
-  document.getElementById('women-indicators-me').style.display = 'none';
   document.getElementById('upward-page').style.display = 'none';
   document.getElementById('falling-page').style.display = 'none';
 });
@@ -341,10 +329,6 @@ document.getElementById('mexico-map').addEventListener('click', () => {
   document.getElementById('mexico-page').style.display = 'block';
   document.getElementById('women-page').style.display = 'none';
   document.getElementById('men-page').style.display = 'none';
-  document.getElementById('women-indicators-pe').style.display = 'none';
-  document.getElementById('women-indicators-br').style.display = 'none';
-  document.getElementById('women-indicators-ch').style.display = 'none';
-  document.getElementById('women-indicators-me').style.display = 'none';
   document.getElementById('upward-page').style.display = 'none';
   document.getElementById('falling-page').style.display = 'none';
 });
@@ -534,10 +518,6 @@ document.getElementById('btn-asc').addEventListener('click', () => {
   document.getElementById('chile-page').style.display = 'none';
   document.getElementById('mexico-page').style.display = 'none';
   document.getElementById('women-page').style.display = 'none';
-  document.getElementById('men-indicators-pe').style.display = 'none';
-  document.getElementById('men-indicators-br').style.display = 'none';
-  document.getElementById('men-indicators-ch').style.display = 'none';
-  document.getElementById('men-indicators-me').style.display = 'none';
 });
 document.getElementById('btn-desc').addEventListener('click', () => {
   document.getElementById('falling-page').style.display = 'block'; 
@@ -549,10 +529,6 @@ document.getElementById('btn-desc').addEventListener('click', () => {
   document.getElementById('chile-page').style.display = 'none';
   document.getElementById('mexico-page').style.display = 'none';
   document.getElementById('women-page').style.display = 'none';
-  document.getElementById('men-indicators-pe').style.display = 'none';
-  document.getElementById('men-indicators-br').style.display = 'none';
-  document.getElementById('men-indicators-ch').style.display = 'none';
-  document.getElementById('men-indicators-me').style.display = 'none';
 });
 
 // document.getElementById('indicadores').addEventListener('click', () => {
