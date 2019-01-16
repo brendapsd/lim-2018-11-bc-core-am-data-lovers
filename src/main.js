@@ -121,7 +121,7 @@ violenceIndicators[2].innerHTML = `${worldbank.filter(indicatorsChileArray, 'SG.
 violenceIndicators[3].innerHTML = `${worldbank.filter(indicatorsMexicoArray, 'SG.VAW').map(violenceInfo).join('')}`;
 
 // filtrado por sexo 
-const womenInfo = (woman, index, country) => {
+const womenInfo = (woman, index, country) => { 
   const averageWomenArray = worldbank.calculateAverage(...worldbank.dataOfData(worldbank.genreFilter(country, 'FE')));
   return `
   <div class="indicator-name"> ${woman.indicatorName}
@@ -134,7 +134,7 @@ const womenInfo = (woman, index, country) => {
     ${dataList(Object.entries(woman.data))}
     <p class="average-value"> Promedio: ${averageWomenArray[index]}<p/> 
   </section>
-  `;
+  `; 
 };
 document.getElementById('women-indicators-pe').innerHTML = `${worldbank.genreFilter(indicatorsPeruArray, 'FE').map(womenInfo).join('')}`;
 document.getElementById('women-indicators-br').innerHTML = `${worldbank.genreFilter(indicatorsBrazilArray, 'FE').map(womenInfo).join('')}`;
@@ -179,6 +179,20 @@ for (let key of hideBtn) {
   });
 }
 // select para mujeres
+
+document.getElementById('country-select-women').addEventListener('change', (evt) => {
+  const selectedIndex = evt.currentTarget.selectedIndex;
+  if (selectedIndex === 0) {
+    console.log('hola'); 
+  } else if (selectedIndex === 1) {
+    console.log('como estas'); 
+  } else if (selectedIndex === 2) {
+    console.log('bien y tu');  
+  } else if (selectedIndex === 3) {
+    console.log('tambien');  
+  }  
+});
+/*
 const countrySelectWomen = document.getElementById('country-select-women');
 
 const getSelectValue = () => {
@@ -212,7 +226,7 @@ const getSelectValue = () => {
 };
 // getSelectValue();
 countrySelectWomen.addEventListener('change', getSelectValue);
-
+*/
 
 /* const womenShowIndicator = () => {
   if (countrySelectWomen.selectedIndex === 0) {
