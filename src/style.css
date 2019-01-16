@@ -48,7 +48,7 @@ ul .dropdown-menu li a:hover{
   margin-bottom: 80px;
 }
 .indicators-header {
-  margin-left: 3.5%;
+  margin-left: 3.8%;
 };
 #countries-list {
     list-style: none;
@@ -56,7 +56,7 @@ ul .dropdown-menu li a:hover{
 #select-indicator{
     border-radius: 5px;
 }
-#peru-page, #brazil-page, #chile-page, #mexico-page, #first-page, #sort-page, #women-page, #men-page{
+.pages {
   display: none;
 }
 .show-btn, .hide-btn {
@@ -111,13 +111,24 @@ footer{
 footer a{
   color: white; 
 }
-#flag-peru, #flag-brazil, #flag-chile, #flag-mexico, #ind-women, #ind-men{
+.indicators-flag, .genre-flag{
   background:#002244;
   color: #FFF; 
-  padding-left: 5%;
   padding-top: 0.3%;
   padding-bottom: 0.3%;
   margin-top: -20px;
+}
+.indicators-flag {
+  padding-left: 5.2%;
+}
+.genre-flag{
+  padding-left: 2%;
+}
+.genre-label {
+  padding-left: 1.5%;
+}
+.form-group {
+  margin-top: 2.5%;
 }
 h3{
   display: inline;
@@ -127,19 +138,19 @@ h4{
   padding-left: 2%;
 }
 .indicator-name {
-  margin-left: 20%;
+  margin-left: 8%;
   box-sizing: border-box;
   padding-bottom: 1.5%;
   font-weight: 600;
   color: #333333;
 }
-.listado-data, .listado-data-visible {
+.listado-data {
   margin-left: 22%;
 }
-ul.data-list {
+.data-list {
   list-style-type: none;
 }
-.indicators-filter, #women-indicators-pe, #women-indicators-br, #women-indicators-ch, #women-indicators-me, #men-indicators-pe, #men-indicators-br, #men-indicators-ch, #men-indicators-me{
+.indicators-filter, .genre-indicators {
   background: #F6F6F6;
   margin-top: 2%; 
 }
