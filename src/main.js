@@ -181,23 +181,26 @@ for (let key of hideBtn) {
 // select para mujeres
 
 const womenInfo = (woman) => { 
-  let arrData = 
-  return  
+  let womanName = ''; 
+  woman.forEach(girl => {
+    const womenList = ` 
+    <div> ${girl.indicatorName}</div>
+    `;
+    womanName += womenList; 
+  });
+  console.log(womanName);
+  return document.getElementById('demo').innerHTML = womanName;
 };
 document.getElementById('country-select-women').addEventListener('change', (evt) => {
   const selectedIndex = evt.currentTarget.selectedIndex;
   if (selectedIndex === 0) {
-    womenInfo(worldbank.genreFilter(indicatorsPeruArray, 'FE'));
-    // console.log(womenInfo); 
+    womenInfo(worldbank.genreFilter(indicatorsPeruArray, 'FE')); 
   } else if (selectedIndex === 1) {
-    womenInfo(worldbank.genreFilter(indicatorsBrazilArray, 'FE'));
-    // console.log(womenInfo); 
+    womenInfo(worldbank.genreFilter(indicatorsBrazilArray, 'FE')); 
   } else if (selectedIndex === 2) {
-    womenInfo(worldbank.genreFilter(indicatorsChileArray, 'FE'));
-    // console.log(womenInfo);  
+    womenInfo(worldbank.genreFilter(indicatorsChileArray, 'FE')); 
   } else if (selectedIndex === 3) {
-    womenInfo(worldbank.genreFilter(indicatorsMexicoArray, 'FE'));
-    // console.log(womenInfo);  
+    womenInfo(worldbank.genreFilter(indicatorsMexicoArray, 'FE'));  
   }  
 });
 /*
