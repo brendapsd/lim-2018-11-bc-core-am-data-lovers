@@ -119,7 +119,7 @@ violenceIndicators[0].innerHTML = `${worldbank.filter(indicatorsPeruArray, 'SG.V
 violenceIndicators[1].innerHTML = `${worldbank.filter(indicatorsBrazilArray, 'SG.VAW').map(violenceInfo).join('')}`;
 violenceIndicators[2].innerHTML = `${worldbank.filter(indicatorsChileArray, 'SG.VAW').map(violenceInfo).join('')}`;
 violenceIndicators[3].innerHTML = `${worldbank.filter(indicatorsMexicoArray, 'SG.VAW').map(violenceInfo).join('')}`;
-
+/*
 // filtrado por sexo 
 const womenInfo = (woman, index, country) => { 
   let womanString = ''; 
@@ -140,14 +140,14 @@ const womenInfo = (woman, index, country) => {
   }); 
   console.log(womanString)
   return document.getElementById('demo').innerHTML = womanString;
-};
+}; */
 // document.getElementById('women-indicators-pe').innerHTML = `${worldbank.genreFilter(indicatorsPeruArray, 'FE').map(womenInfo).join('')}`;
 // document.getElementById('women-indicators-br').innerHTML = `${worldbank.genreFilter(indicatorsBrazilArray, 'FE').map(womenInfo).join('')}`;
 // document.getElementById('women-indicators-ch').innerHTML = `${worldbank.genreFilter(indicatorsChileArray, 'FE').map(womenInfo).join('')}`;
 // document.getElementById('women-indicators-me').innerHTML = `${worldbank.genreFilter(indicatorsMexicoArray, 'FE').map(womenInfo).join('')}`;
 // Mostrar indicadores mujeres en html con select 
 
-/* const womenInfo = (woman) => { 
+const womenInfo = (woman) => { 
   let womanName = ''; 
   woman.forEach(girl => {
     const womenList = ` 
@@ -157,14 +157,14 @@ const womenInfo = (woman, index, country) => {
         <button class="hide-btn" id ="hide-btn-${girl.countryName}-${girl.countryCode}-${girl.indicatorCode}" data-code="${girl.countryName}-${girl.countryCode}-${girl.indicatorCode}">Ocultar</button>
       </div>
     </div>
-    <divclass="listado-data" id="listas-${girl.countryName}-${girl.countryCode}-${girl.indicatorCode}" data-code="${girl.countryName}-${girl.countryCode}-${girl.indicatorCode}> 
+    <div class="listado-data" id="listas-${girl.countryName}-${girl.countryCode}-${girl.indicatorCode}" data-code="${girl.countryName}-${girl.countryCode}-${girl.indicatorCode}> 
       ${dataList(Object.entries(girl.data))} 
     </div>
     `;
     womanName += womenList; 
   }); 
   return document.getElementById('demo').innerHTML = womanName;
-}; */
+}; 
 
 const menInfo = (man, index, country) => {
   const averageMenArray = worldbank.calculateAverage(...worldbank.dataOfData(worldbank.genreFilter(country, 'MA')));
@@ -181,10 +181,10 @@ const menInfo = (man, index, country) => {
   </section>
   `;
 };
-document.getElementById('men-indicators-pe').innerHTML = `${worldbank.genreFilter(indicatorsPeruArray, 'MA').map(menInfo).join('')}`;
-document.getElementById('men-indicators-br').innerHTML = `${worldbank.genreFilter(indicatorsBrazilArray, 'MA').map(menInfo).join('')}`;
-document.getElementById('men-indicators-ch').innerHTML = `${worldbank.genreFilter(indicatorsChileArray, 'MA').map(menInfo).join('')}`;
-document.getElementById('men-indicators-me').innerHTML = `${worldbank.genreFilter(indicatorsMexicoArray, 'MA').map(menInfo).join('')}`;
+document.getElementById('men-indicators-pe').innerHTML = `${worldbank.genreFilter(indicatorsPeruArray, 'MA').map(menInfo)}`;
+document.getElementById('men-indicators-br').innerHTML = `${worldbank.genreFilter(indicatorsBrazilArray, 'MA').map(menInfo)}`;
+document.getElementById('men-indicators-ch').innerHTML = `${worldbank.genreFilter(indicatorsChileArray, 'MA').map(menInfo)}`;
+document.getElementById('men-indicators-me').innerHTML = `${worldbank.genreFilter(indicatorsMexicoArray, 'MA').map(menInfo)}`;
 
 let showBtn = document.querySelectorAll('.show-btn');
 let hideBtn = document.querySelectorAll('.hide-btn');
@@ -206,13 +206,13 @@ for (let key of hideBtn) {
 document.getElementById('country-select-women').addEventListener('change', (evt) => {
   const selectedIndex = evt.currentTarget.selectedIndex;
   if (selectedIndex === 0) {
-    womenInfo(worldbank.genreFilter(indicatorsPeruArray, 'FE'), 0, indicatorsPeruArray); 
+    womenInfo(worldbank.genreFilter(indicatorsPeruArray, 'FE')); 
   } else if (selectedIndex === 1) {
-    womenInfo(worldbank.genreFilter(indicatorsBrazilArray, 'FE'), 1, indicatorsBrazilArray); 
+    womenInfo(worldbank.genreFilter(indicatorsBrazilArray, 'FE')); 
   } else if (selectedIndex === 2) {
-    womenInfo(worldbank.genreFilter(indicatorsChileArray, 'FE'), 2, indicatorsChileArray); 
+    womenInfo(worldbank.genreFilter(indicatorsChileArray, 'FE')); 
   } else if (selectedIndex === 3) {
-    womenInfo(worldbank.genreFilter(indicatorsMexicoArray, 'FE'), 3, indicatorsMexicoArray);  
+    womenInfo(worldbank.genreFilter(indicatorsMexicoArray, 'FE'));  
   }  
 }); 
 /*
